@@ -297,15 +297,15 @@ let
   configuration = { config, lib, pkgs, ... }:
     with pkgs;
     let
-      src = fetchGit "https://github.com/drduh/YubiKey-Guide";
+      src = fetchGit "https://github.com/walian0/YubiKey-Guide";
 
       guide = "${src}/README.md";
 
       contrib = "${src}/contrib";
 
-      drduhConfig = fetchGit "https://github.com/drduh/config";
+      ykConfig = fetchGit "https://github.com/walian0/.dotfiles";
 
-      gpg-conf = "${drduhConfig}/gpg.conf";
+      gpg-conf = "${ykConfig}/gpg.conf";
 
       xserverCfg = config.services.xserver;
 
