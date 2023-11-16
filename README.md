@@ -321,7 +321,7 @@ let
       # Instead of hard-coding the pinentry program, chose the appropriate one
       # based on the environment of the image the user has chosen to build.
       gpg-agent-conf = runCommand "gpg-agent.conf" {} ''
-        sed '/pinentry-program/d' ${drduhConfig}/gpg-agent.conf > $out
+        sed '/pinentry-program/d' ${ykConfig}/gpg-agent.conf > $out
         echo "pinentry-program ${pinentry.${pinentryFlavour}}/bin/pinentry" >> $out
       '';
 
